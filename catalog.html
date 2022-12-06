@@ -20,30 +20,32 @@
           alt="Логотип интернет-магазина современных гаджетов «Девайс».">
       </a>
 
-      <!--Форма поиска-->
-      <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-        <label class="visually-hidden">Поиск по сайту
-          <input class="search-form-field" type="search" name="search" placeholder="Поиск по сайту">
-        </label>
-        <button class="button search-form-button" type="submit">Найти</button>
-      </form>
+      <div class="user-menu-wrapper">
+
+        <!--Форма поиска-->
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="visually-hidden" for="search">Поиск по сайту</label>
+          <input class="search-form-field" type="search" id="search" name="search" placeholder="Поиск по сайту">
+          <button class="button search-form-button" type="submit">Найти</button>
+        </form>
+
+        <!--Меню пользователя-->
+        <ul class="user-menu-list">
+          <li class="user-menu-item">
+            <p class="user-menu-profile">Коля Петухов</p>
+            <button class="button user-menu-button" type="button">Выйти</button>
+          </li>
+          <li class="user-menu-item">
+            <a class="user-menu-link" href="#">Сравнить</a>
+          </li>
+          <li class="user-menu-item">
+            <a class="user-menu-link" href="#"><span class="quantity-value">2</span>Корзина</a>
+          </li>
+        </ul>
+      </div>
 
       <!--НАВИГАЦИЯ-->
       <nav class="navigation">
-
-        <!--Меню пользователя-->
-        <ul class=" navigation-user-list">
-          <li class="navigation-user-item">
-            <p class="navigation-user-profile">Коля Петухов</p>
-            <button class="navigation-user-button" type="button">Выйти</button>
-          </li>
-          <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">Сравнить</a>
-          </li>
-          <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#"><span class="quantity-value">2</span>Корзина</a>
-          </li>
-        </ul>
 
         <!--Меню сайта-->
         <ul class="navigation-list">
