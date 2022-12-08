@@ -1,0 +1,592 @@
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  background-color: #FFFFFF;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  display: inline-block;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 3.6px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+}
+
+/*ГЛАВНАЯ СТРАНИЦА*/
+.header-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+/*ШАПКА*/
+.page-header {
+  display: flex;
+  flex-direction: column;
+  width: 1040px;
+  margin: 20px 60px -16px;
+}
+
+.page-header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-header a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.logo-link {
+  min-width: 145px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: block;
+}
+
+.user-menu-wrapper {
+  display: flex;
+}
+
+/* Форма поиска */
+.search-form-field {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.search-form-button {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+/* Меню пользователя */
+.user-menu-list {
+  display: flex;
+}
+
+.quantity-value {
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+/*НАВИГАЦИЯ*/
+.navigation-link {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+.navigation-submenus-link {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/*ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ*/
+.main-index {
+  flex-grow: 1;
+}
+
+/* Галерея «Слайдер» */
+.slider-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.gallery-slider-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-slider-number {
+  font-weight: 700;
+  font-size: 180px;
+  color: #FFFFFF;
+  /* временно */
+  background-color: #FFE17F;
+}
+
+.gallery-slider-description {
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.gallery-slider-description em {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  margin-bottom: 29px;
+}
+
+.gallery-slider-link {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  margin-bottom: 60px;
+}
+
+.gallery-slider-description-list {
+  margin-bottom: 26px;
+}
+
+.gallery-slider-item-parameter {
+  font-size: 16px;
+}
+
+.gallery-slider-item-meaning {
+  font-size: 36px;
+  color: #000000;
+}
+
+/* Категории товаров */
+.product-categories {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.product-categories-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-categories-link {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Сервисы */
+.services {
+  background-color: #F0F0F0;
+  margin-bottom: 70px;
+}
+
+.services-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.services-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button-active {
+  color: #FFE17F;
+  background-color: #000000;
+}
+
+.services-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0;
+}
+
+.services-description {
+  margin: 0;
+}
+
+/* Доставка под заказ */
+.delivery {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.delivery-link {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+.contacts-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.contacts-container h2 {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0;
+}
+
+.contacts-container p {
+  margin: 0;
+}
+
+/* О нас */
+.about-us-sentence-delivery-item {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  color: #000000;
+}
+
+.about-us-link,
+.contacts-write-link {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Контакты */
+.contacts-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+}
+
+.contacts-address {
+  font-style: normal;
+}
+
+.contacts-address-phone-link {
+  text-decoration-line: underline;
+  color: #444444;
+}
+
+.contacts-schedule-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ПОДПИСКА */
+.subscribe {
+  background-color: #F0F0F0;
+}
+
+.subscribe-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.subscribe p {
+  margin: 0;
+}
+
+.subscribe-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0;
+}
+
+/* Форма подписки */
+.subscribe-form-field {
+  opacity: 0.5;
+}
+
+/* ПОДВАЛ ГЛАВНОЙ СТРАНИЦЫ */
+.page-footer {
+  background-color: #444444;
+  color: #FFFFFF;
+}
+
+.page-footer-container {
+  width: 1160px;
+  margin: 0 auto;
+
+}
+
+.footer-contacts ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-contacts a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+/* Адрес магазина */
+.footer-contacts-address {
+  font-style: normal;
+}
+
+.footer-contacts-address-text {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
+
+/* Сервисы */
+.footer-contacts-services-link {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+/* Ссылка на телефон */
+.footer-contacts .footer-contacts-phone-link {
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration-line: underline;
+}
+
+/*СТРАНИЦА КАТАЛОГА*/
+/* Меню пользователя */
+.user-menu-profile {
+  color: #000000;
+  margin: 0;
+}
+
+.user-menu-button {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: capitalize;
+  opacity: 0.3;
+  background-color: transparent;
+}
+
+/* ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ КАТАЛОГА */
+.inner-header-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0;
+}
+
+/* Хлебные крошки */
+.header-breadcrumbs-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-breadcrumbs-link {
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #000000;
+}
+
+/* КАТАЛОГ */
+/* Фильтры */
+.catalog-products ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-products h3 {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+}
+
+.catalog-products-filter-group-title {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  color: #000000;
+}
+
+.catalog-products-filter-group-label {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.catalog-products-filter-group-control {
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+/* Сортировка */
+.catalog-products-select-control {
+  font: inherit;
+  color: #000000;
+  appearance: none;
+}
+
+/* Кнопки-ссылки сортировки */
+.catalog-products-sort-button-link {
+  color: #444444;
+  text-decoration: none;
+}
+
+/* КАРТОЧКИ ТОВАРА */
+.catalog-products-card-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.catalog-products-card-title {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  margin: 0;
+}
+
+.link-button-more-info {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+.catalog-products-card-price b {
+  font-weight: 400;
+  line-height: 21px;
+  text-align: right;
+  margin: 0;
+}
+
+.catalog-products-button {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* ПАГИНАЦИЯ */
+.catalog-products-pagination-link {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #444444;
+  opacity: 0.3;
+  text-decoration: none;
+}
+
+.catalog-products-pagination-link-current {
+  opacity: 0.6;
+}
+
+.pagination-link-prev,
+.pagination-link-next {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+}
+
+.catalog-products-pagination-link.pagination-link-next {
+  color: #000000;
+  opacity: 1;
+}
+
+.catalog-products-pagination-dots {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  opacity: 0.3;
+}
