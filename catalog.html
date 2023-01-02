@@ -16,17 +16,21 @@
       <div class="container">
 
         <!--Логотип сайта-->
-        <a class="logo-link" href="index.html">
-          <img class="logo" src="images/logo/logo.svg" width="145" height="36"
-            alt="Логотип интернет-магазина современных гаджетов «Девайс».">
-        </a>
+        <div class="logo-image-wrapper">
+          <a class="logo-link" href="index.html">
+            <img class="logo" src="images/logo/logo.svg" width="145" height="36"
+              alt="Логотип интернет-магазина современных гаджетов «Девайс».">
+          </a>
+        </div>
 
         <div class="user-menu-wrapper">
 
           <!--Форма поиска-->
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="visually-hidden" for="search">Поиск по сайту.</label>
-            <input class="search-form-field" type="search" id="search" name="search" placeholder="Поиск по сайту">
+            <label class="search-form-label">
+              <input class="search-form-field" type="search" name="search" placeholder="Поиск по сайту">
+              <span class="visually-hidden">Поиск по сайту.</span>
+            </label>
             <button class="button search-form-button" type="submit">Найти</button>
           </form>
 
@@ -58,9 +62,8 @@
                     <a class="navigation-submenus-link" href="#">Виртуальная
                       реальность</a>
                   </li>
-                  <li class="navigation-submenus-item">
-                    <a class="navigation-submenus-link navigation-submenus-link-current">Моноподы
-                      для cелфи</a>
+                  <li class="navigation-submenus-item navigation-submenus-item-current">
+                    Моноподы для cелфи
                   </li>
                   <li class="navigation-submenus-item">
                     <a class="navigation-submenus-link" href="#">Экшн-камеры</a>
@@ -154,7 +157,6 @@
                 <legend class="catalog-products-filter-group-title">Цвет</legend>
                 <ul class="catalog-products-filter-group-list catalog-products-filter-group-list-type-checkbox">
                   <li class="catalog-products-filter-group-item">
-
                     <!-- Для неактивного состояния необходимо добавить у label класс disabled -->
                     <label class="catalog-products-filter-group-control">
                       <input class="visually-hidden catalog-products-filter-group-input" type="checkbox" name="black"
@@ -311,8 +313,6 @@
                   </a>
                   <a class="catalog-products-card-link link-button-more-info button" href="#">Подробнее</a>
                 </li>
-                <!-- Дополнительный класс для новинок -->
-
               </ul>
               <button class="button catalog-products-button" type="button">Загрузить ещё</button>
 

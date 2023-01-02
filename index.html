@@ -16,17 +16,19 @@
       <div class="container">
 
         <!--Логотип сайта-->
-        <a class="logo-link logo-link-current">
+        <div class="logo-image-wrapper">
           <img class="logo" src="images/logo/logo.svg" width="145" height="36"
             alt="Логотип интернет-магазина современных гаджетов «Девайс».">
-        </a>
+        </div>
 
         <div class="user-menu-wrapper">
 
           <!--Форма поиска-->
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="visually-hidden" for="search">Поиск по сайту.</label>
-            <input class="search-form-field" type="search" id="search" name="search" placeholder="Поиск по сайту">
+            <label class="search-form-label">
+              <input class="search-form-field" type="search" name="search" placeholder="Поиск по сайту">
+              <span class="visually-hidden">Поиск по сайту.</span>
+            </label>
             <button class="button search-form-button" type="submit">Найти</button>
           </form>
 
@@ -48,14 +50,14 @@
         <nav class="navigation">
 
           <!--Меню сайта-->
-
           <div class="navigation-menu-dropdown">
             <a class="navigation-catalog-link" href="#">Каталог товаров</a>
             <div class="navigation-submenus-container">
               <div class="navigation-submenus-wrapper">
                 <ul class="navigation-submenus-list column-1">
                   <li class="navigation-submenus-item">
-                    <a class="navigation-submenus-link" href="#">Виртуальная реальность</a>
+                    <a class="navigation-submenus-link" href="#">Виртуальная
+                      реальность</a>
                   </li>
                   <li class="navigation-submenus-item">
                     <a class="navigation-submenus-link" href="catalog.html">Моноподы для cелфи</a>
@@ -82,9 +84,8 @@
           </div>
 
           <ul class="navigation-services-list">
+            <!-- Если пункт меню активный, то нужно добавить для li класс navigation-services-item-current -->
             <li class="navigation-services-item">
-
-              <!-- Если пункт меню активный, то нужно добавить у ссылки класс navigation-services-link-current -->
               <a class="navigation-services-link" href="#">Доставка</a>
             </li>
             <li class="navigation-services-item">
@@ -187,11 +188,10 @@
             </li>
           </ul>
 
-
           <!-- Кнопки пагинации слайдера -->
           <ol class="gallery-slider-pagination-list">
             <li class="gallery-slider-pagination-item">
-              <button class="gallery-slider-pagination-button pagination-button-current" type="button"><span
+              <button class="gallery-slider-pagination-button slider-pagination-button-current" type="button"><span
                   class="visually-hidden">Товар №1.</span></button>
             </li>
             <li class="gallery-slider-pagination-item">
@@ -240,15 +240,18 @@
           <div class="services-wrapper">
             <ul class="services-buttons-list">
               <li class="services-buttons-item services-buttons-item-current">
-                <button class="button services-button button-active" type="button">Доставка
+                <button class="button services-button button-active" type="button">
+                  <span class="services-button-text">Доставка</span>
                 </button>
               </li>
               <li class="services-buttons-item">
-                <button class="button services-button" type="button">Гарантия
+                <button class="button services-button" type="button">
+                  <span class="services-button-text">Гарантия</span>
                 </button>
               </li>
               <li class="services-buttons-item">
-                <button class="button services-button" type="button">Кредит
+                <button class="button services-button" type="button">
+                  <span class="services-button-text">Кредит</span>
                 </button>
               </li>
             </ul>
