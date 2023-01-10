@@ -178,6 +178,7 @@ body {
   padding: 8px;
   border: 2px solid #000000;
   border-radius: 0 20px 20px 0;
+  transition: all 0.5s;
 }
 
 .search-form-label:focus-within {
@@ -206,7 +207,6 @@ body {
 .search-form-button:hover {
   background-color: #000000;
   color: #FFFFFF;
-  transition-duration: 0.5s;
 }
 
 .search-form-button:focus::before {
@@ -322,7 +322,7 @@ body {
 
 .user-menu-link:hover {
   opacity: 0.6;
-  transition-duration: 0.1s;
+  transition-duration: 0.3s;
 }
 
 .user-menu-link:focus {
@@ -341,7 +341,7 @@ body {
 
 .user-menu-link:active {
   opacity: 0.3;
-  transition-duration: 0.2s;
+  transition-duration: 0.1s;
 }
 
 /*НАВИГАЦИЯ*/
@@ -387,12 +387,12 @@ body {
   background-size: 16px 16px;
   background-repeat: no-repeat;
   background-position: center;
+  transition: all 0.5s;
 }
 
 .navigation-catalog-link:hover::after {
   background-image: url("../images/minus.svg");
   opacity: 1;
-  transition-duration: 0.5s;
 }
 
 .navigation-menu-dropdown:hover .navigation-submenus-container {
@@ -425,7 +425,6 @@ body {
 .navigation-catalog-link:active::after {
   background-image: url("../images/minus.svg");
   opacity: 1;
-  transition-duration: 0.5s;
 }
 
 .navigation-menu-dropdown:active .navigation-submenus-container {
@@ -1007,11 +1006,6 @@ body {
   background-color: #000000;
 }
 
-.services-buttons-item-current {
-  min-width: 280px;
-  background-color: #000000;
-}
-
 .services-button {
   position: relative;
   min-width: 160px;
@@ -1032,12 +1026,22 @@ body {
 }
 
 .button-active {
+  min-width: 280px;
+  background-color: #000000;
   color: #FFE17F;
+  text-align: start;
+}
+
+.services-button-text {
+  display: inline-block;
+  min-width: 152px;
+  text-align: center;
+  transition: all 0.5s linear;
 }
 
 .services-button:hover::after {
   transform: translateY(-50%) scaleY(5);
-  transition: all 0.3s linear;
+  transition-duration: 0.3s;
 }
 
 .services-button:focus {
@@ -1066,9 +1070,39 @@ body {
   background-color: #FFCC33;
 }
 
+.button-active:hover .services-button-text {
+  transform: translateX(25px);
+}
+
+.button-active:focus .services-button-text {
+  transform: translateX(25px);
+}
+
+.button-active:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.button-active:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.button-active:focus-visible .services-button-text {
+  transform: translateX(25px);
+}
+
+.button-active:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.button-active:active .services-button-text {
+  transform: translateX(25px);
+}
+
 .services-button:disabled {
   opacity: 0.3;
-  cursor: default;
+  pointer-events: none;
 }
 
 .services-button:disabled::after {
@@ -1163,6 +1197,7 @@ body {
   background-size: 47px 31px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  transition: all 0.5s;
   background-color: #FFE17F;
 }
 
@@ -1174,6 +1209,7 @@ body {
   right: 43px;
   width: 40px;
   height: 40px;
+  transition: all 0.5s;
   border-radius: 40px;
   background-color: rgba(220, 220, 220, 0.5);
 }
@@ -1195,18 +1231,30 @@ body {
   background-color: #FFC700;
 }
 
-/* .delivery-link:focus {
-} */
+.delivery-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
 
+.delivery-link:focus:not(:focus-visible) {
+  outline: none;
+}
 
+.delivery-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
 
-.delivery-link:active,
-.tooltip-icon {
+.delivery-link:active {
   opacity: 0.3;
 }
 
 .delivery-link:active::before {
   background-color: #FFC700;
+}
+
+.delivery-link:active .tooltip-icon {
+  opacity: 1;
 }
 
 .two-columns {
@@ -1321,6 +1369,7 @@ body {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  transition: all 0.5s linear;
   background-color: #FFE17F;
 }
 
@@ -1361,6 +1410,30 @@ body {
   color: #444444;
 }
 
+.contacts-address-phone-link:hover {
+  opacity: 0.6;
+  transition-duration: 0.1s;
+}
+
+.contacts-address-phone-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.contacts-address-phone-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.contacts-address-phone-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.contacts-address-phone-link:active {
+  opacity: 0.3;
+  transition-duration: 0.1s;
+}
+
 .contacts-schedule-list {
   list-style-type: none;
   margin: 0;
@@ -1372,6 +1445,44 @@ body {
 .contacts-write-link {
   min-width: 259px;
   order: 2;
+}
+
+.about-us-link:hover::after,
+.contacts-write-link:hover::after {
+  transform: translateY(-50%) scaleY(5);
+  transition: all 0.3s linear;
+}
+
+.about-us-link:focus,
+.contacts-write-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.about-us-link:focus::after,
+.contacts-write-link:focus::after {
+  transform: translateY(-50%) scaleY(1);
+}
+
+.about-us-link:focus:not(:focus-visible),
+.contacts-write-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.about-us-link:focus-visible,
+.contacts-write-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+.about-us-link:focus-visible::after,
+.contacts-write-link:focus-visible::after {
+  transform: translateY(-50%) scaleY(1);
+}
+
+.about-us-link:active::after,
+.contacts-write-link:active::after {
+  transform: translateY(-50%) scaleY(5);
+  transition-duration: 0.1s;
+  background-color: #FFCC33;
 }
 
 /* ПОДПИСКА */
@@ -1436,16 +1547,74 @@ body {
   border: none;
   border-bottom: 3px solid #C4C4C4;
   background-color: transparent;
+  color: #444444;
+  cursor: pointer;
 }
 
 .subscribe-form-field::placeholder {
   opacity: 0.5;
 }
 
+.subscribe-form-field:focus {
+  background-color: #DCDCDC;
+}
+
+.subscribe-form-field:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.subscribe-form-field:focus-visible {
+  outline: none;
+  background-color: #DCDCDC;
+}
+
+/* Ошибка ввода */
+.subscribe-field-input-error {
+  border-bottom: 3px solid #FF3D3D;
+}
+
+.subscribe-form-field:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
 .subscribe-form-button {
   min-width: 253px;
   padding: 15px;
   border: 3px solid #C4C4C4;
+  transition: all 0.5s;
+}
+
+.subscribe-form-button:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 3px solid #000000;
+}
+
+.subscribe-form-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.subscribe-form-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.subscribe-form-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.subscribe-form-button:active {
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.3);
+  border: 3px solid #000000;
+  transition-duration: 0.2s;
+}
+
+.subscribe-form-button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .subscribe-clarification {
@@ -1478,7 +1647,7 @@ body {
   color: #FFFFFF;
 }
 
-.footer-logo {
+.logo-image-footer-wrapper {
   width: 145px;
   margin-bottom: 35px;
 }
@@ -1493,6 +1662,7 @@ body {
 
 /* Адрес магазина */
 .footer-contacts-address {
+  grid-column: 1/2;
   font-style: normal;
 }
 
@@ -1504,6 +1674,7 @@ body {
 
 /* Сервисы */
 .footer-contacts-services-list {
+  grid-column: 2/3;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1517,12 +1688,65 @@ body {
   text-transform: uppercase;
 }
 
+.footer-contacts-services-link:hover {
+  color: #FFC700;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition-duration: 0.3s;
+}
+
+.footer-contacts-services-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.footer-contacts-services-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.footer-contacts-services-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.footer-contacts-services-link:active {
+  opacity: 0.3;
+  transition-duration: 0.1s;
+}
+
 /* Ссылка на телефон */
 .footer-contacts .footer-contacts-phone-link {
+  grid-column: 3/4;
   justify-self: end;
   font-size: 16px;
   line-height: 33px;
   text-decoration-line: underline;
+}
+
+.footer-contacts-phone-link:hover {
+  color: #FFC700;
+  transition-duration: 0.3s;
+}
+
+.footer-contacts-phone-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.footer-contacts-phone-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.footer-contacts-phone-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.footer-contacts-phone-link:active {
+  opacity: 0.3;
+  transition-duration: 0.1s;
 }
 
 /* Ссылки на социальные сети */
@@ -1556,36 +1780,102 @@ body {
 }
 
 .footer-contacts-socials-item .footer-contacts-socials-link {
+  position: relative;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s;
 }
 
-.telegram-socials-link {
-  background-image: url("../images/icons/telegram.svg");
-  background-size: 14px 12px;
-  background-repeat: no-repeat;
-  background-position: center;
+.socials-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }
 
-.youtube-socials-link {
-  background-image: url("../images/icons/youtube.svg");
-  background-size: 16px 11px;
-  background-repeat: no-repeat;
-  background-position: center;
+.footer-contacts-socials-item .footer-contacts-socials-link:hover {
+  background-color: #FFC700;
 }
 
-.twitter-socials-link {
-  background-image: url("../images/icons/twitter.svg");
-  background-size: 15px 15px;
-  background-repeat: no-repeat;
-  background-position: center;
+.footer-contacts-socials-link:focus::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
-.footer-contacts-logo-htmlacademy-link {
+.footer-contacts-socials-link:focus:not(:focus-visible)::before {
+  outline: none;
+}
+
+.footer-contacts-socials-link:focus-visible {
+  outline: none;
+}
+
+.footer-contacts-socials-link:focus-visible::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.footer-contacts-socials-link:active {
+  background-color: #FFC700;
+}
+
+.footer-contacts-socials-link:active .socials-icon {
+  opacity: 0.3;
+  transition-duration: 0.1s;
+}
+
+.footer-logo-image-wrapper {
+  grid-column: 3/4;
   justify-self: end;
   width: 115px;
+}
+
+.footer-contacts-logo-htmlacademy-link .logo-htmlacademy path {
+  transition: all 0.5s;
+}
+
+.footer-contacts-logo-htmlacademy-link:hover .logo-htmlacademy path {
+  fill: #FFFFFF;
+}
+
+.footer-contacts-logo-htmlacademy-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.footer-contacts-logo-htmlacademy-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.footer-contacts-logo-htmlacademy-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.footer-contacts-logo-htmlacademy-link:active {
+  opacity: 0.3;
+}
+
+.footer-contacts-logo-htmlacademy-link:active .logo-htmlacademy path {
+  fill: #FFFFFF;
 }
 
 .logo-htmlacademy {
@@ -1603,6 +1893,7 @@ body {
 
 .logo-link:hover {
   opacity: 0.6;
+  transition-duration: 0.3s;
 }
 
 .logo-link:focus {
@@ -1621,6 +1912,7 @@ body {
 
 .logo-link:active {
   opacity: 0.3;
+  transition-duration: 0.1s;
 }
 
 /* Меню пользователя */
@@ -1647,6 +1939,39 @@ body {
   letter-spacing: normal;
   padding: 0;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.user-menu-button:hover {
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
+.user-menu-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.user-menu-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.user-menu-button:focus-visible {
+  outline: none;
+}
+
+.user-menu-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.user-menu-button:active {
+  opacity: 0.3;
+  transition-duration: 0.1s;
+}
+
+.user-menu-button:disabled {
+  opacity: 0.1;
+  cursor: default;
 }
 
 .catalog-page-header {
@@ -1698,6 +2023,30 @@ body {
   position: relative;
   text-decoration: none;
   color: #000000;
+}
+
+.header-breadcrumbs-link:hover {
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
+.header-breadcrumbs-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.header-breadcrumbs-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.header-breadcrumbs-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.header-breadcrumbs-link:active {
+  opacity: 0.3;
+  transition-duration: 0.1s;
 }
 
 .header-breadcrumbs-item::before {
@@ -1832,6 +2181,53 @@ body {
   right: -9px;
 }
 
+.catalog-products-filter-group-range-toggle:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+  transition-duration: 0.3s;
+}
+
+.catalog-products-filter-group-range-toggle:focus::before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-products-filter-group-range-toggle:focus:not(:focus-visible)::before {
+  outline: none;
+}
+
+.catalog-products-filter-group-range-toggle:focus-visible {
+  outline: none;
+}
+
+.catalog-products-filter-group-range-toggle:focus-visible::before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-products-filter-group-range-toggle:active {
+  background-color: #000000;
+  transition-duration: 0.1s;
+}
+
+.catalog-products-filter-group-range-toggle:disabled {
+  border-color: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
 .catalog-products-range-inputs-wrapper {
   display: flex;
   transform: translateX(-13px);
@@ -1844,6 +2240,7 @@ body {
   line-height: 20px;
   text-align: center;
   color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .catalog-products-filter-group-label:last-child {
@@ -1865,6 +2262,30 @@ body {
   border: none;
   -moz-appearance: textfield;
   appearance: textfield;
+}
+
+.catalog-products-filter-group-label:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-products-filter-group-range-input:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.catalog-products-filter-group-range-input:focus-visible {
+  outline: none;
+}
+
+.catalog-products-filter-group-label:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+/* Неактивное состояние */
+.catalog-products-filter-group-label.disabled {
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 .catalog-products-filter-group-list-type-checkbox .catalog-products-filter-group-item:not(:last-child) {
@@ -1981,9 +2402,50 @@ body {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  transition: all 0.5s linear;
   width: 100%;
   height: 8px;
   background-color: #FFE17F;
+}
+
+.catalog-products-filter-group-button:hover::before {
+  transform: translateY(-50%) scaleY(5);
+  transition-duration: 0.3s;
+}
+
+.catalog-products-filter-group-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.catalog-products-filter-group-button:focus::before {
+  transform: translateY(-50%) scaleY(1);
+}
+
+.catalog-products-filter-group-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.catalog-products-filter-group-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+.catalog-products-filter-group-button:focus-visible::before {
+  transform: translateY(-50%) scaleY(1);
+}
+
+.catalog-products-filter-group-button:active::before {
+  transform: translateY(-50%) scaleY(5);
+  transition-duration: 0.1s;
+  background-color: #FFCC33;
+}
+
+.catalog-products-filter-group-button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.catalog-products-filter-group-button:disabled::before {
+  transform: translateY(-50%) scaleY(1);
 }
 
 .catalog-products-wrapper {
@@ -2029,6 +2491,30 @@ body {
   background-position: right 12px center;
 }
 
+.catalog-products-select-control:hover {
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
+.catalog-products-select-control:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-products-select-control:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.catalog-products-select-control:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-products-select-control:active {
+  opacity: 0.3;
+  transition-duration: 0.1s;
+}
+
 /* Кнопки-ссылки сортировки */
 .catalog-products-sort-button-list {
   display: flex;
@@ -2060,6 +2546,30 @@ body {
 
 .sort-icon-arrow-down {
   transform: rotate(180deg);
+}
+
+.catalog-products-sort-button-link:hover svg {
+  opacity: 0.5;
+  transition-duration: 0.3s;
+}
+
+.catalog-products-sort-button-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-products-sort-button-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.catalog-products-sort-button-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-products-sort-button-link:active svg {
+  opacity: 1;
+  transition-duration: 0.1s;
 }
 
 /* КАРТОЧКИ ТОВАРА */
@@ -2148,17 +2658,35 @@ body {
   color: #444444;
 }
 
-.link-button-more-info {
-  display: none;
+.catalog-products-card-more-info-wrapper {
+  position: absolute;
+  z-index: -1;
+  width: 360px;
+  height: 380px;
+  top: 0;
+  left: 0;
+  background-color: rgba(240, 240, 240, 0.8);
+  transition: all 0.5s;
+}
+
+.catalog-products-card-text-info {
   position: absolute;
   min-width: 220px;
-  z-index: 1;
+  padding: 0;
+  margin: 0;
   top: 170px;
   left: 50%;
   transform: translateX(-50%);
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
-.link-button-more-info::after {
+.catalog-products-card-text-info::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -2168,6 +2696,46 @@ body {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  transition: all 0.5s;
+}
+
+.catalog-products-card-link:hover .catalog-products-card-description-wrapper {
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
+.catalog-products-card-link:hover .catalog-products-card-more-info-wrapper {
+  z-index: 1;
+  transition-duration: 0.3s;
+}
+
+.catalog-products-card-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-products-card-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.catalog-products-card-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-products-card-link:active .catalog-products-card-description-wrapper {
+  opacity: 0.3;
+  transition-duration: 0.1s;
+}
+
+.catalog-products-card-link:active .catalog-products-card-more-info-wrapper {
+  z-index: 1;
+  transition-duration: 0.1s;
+}
+
+.catalog-products-card-link:active .catalog-products-card-more-info-wrapper > .catalog-products-card-text-info::after {
+  background-color: #FFC700;
+  transition-duration: 0.1s;
 }
 
 .catalog-products-button {
@@ -2177,6 +2745,35 @@ body {
   border: 3px solid #E5E5E5;
   font-size: 16px;
   line-height: 19px;
+}
+
+.catalog-products-button:hover {
+  border: 3px solid #000000;
+  transition-duration: 0.3s;
+}
+
+.catalog-products-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-products-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.catalog-products-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-products-button:active {
+  opacity: 0.3;
+  transition-duration: 0.1s;
+}
+
+.catalog-products-button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 /* ПАГИНАЦИЯ */
@@ -2189,32 +2786,17 @@ body {
   background-color: #EBEBEB;
 }
 
-.catalog-pagination-item-prev,
-.catalog-pagination-item-next {
-  align-self: start;
-}
-
-.catalog-products-pagination-numbers-pages-item {
-  align-self: center;
-}
-
-.catalog-products-pagination-link,
-.catalog-page-number-link {
-  display: block;
+.catalog-products-pagination-item,
+.catalog-page-number-item {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: rgba(68, 68, 68, 0.3);
-  text-decoration: none;
 }
 
-.catalog-page-number-link-current {
-  color: rgba(68, 68, 68, 0.6);
-}
-
-.catalog-pagination-link-prev,
-.catalog-pagination-link-next {
-  padding: 25px;
+.catalog-pagination-item-prev,
+.catalog-pagination-item-next {
+  align-self: start;
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -2223,6 +2805,27 @@ body {
   text-transform: uppercase;
 }
 
+.catalog-products-pagination-numbers-pages-item {
+  align-self: center;
+}
+
+.catalog-products-pagination-text {
+  padding: 25px;
+  margin: 0;
+}
+
+.catalog-products-pagination-link,
+.catalog-page-number-link {
+  display: block;
+  color: rgba(68, 68, 68, 0.3);
+  text-decoration: none;
+}
+
+.catalog-products-pagination-link {
+  padding: 25px;
+}
+
+.catalog-pagination-item-next,
 .catalog-pagination-link-next {
   color: #000000;
 }
@@ -2242,9 +2845,79 @@ body {
   min-height: 40px;
 }
 
-.catalog-page-number-dots {
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  color: rgba(68, 68, 68, 0.3);
+.catalog-page-number-item-current {
+  color: rgba(68, 68, 68, 0.6);
+}
+
+.catalog-products-pagination-link:hover {
+  background-color: #DCDCDC;
+  transition-duration: 0.3s;
+}
+
+.catalog-products-pagination-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-products-pagination-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.catalog-products-pagination-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-products-pagination-link:active {
+  background-color: #DCDCDC;
+  opacity: 0.3;
+  transition-duration: 0.1s;
+}
+
+.catalog-page-number-link:hover {
+  color: #444444;
+  transition-duration: 0.3s;
+}
+
+.catalog-page-number-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-page-number-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.catalog-page-number-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-page-number-link:active {
+  color: rgba(68, 68, 68, 0.1);
+  transition-duration: 0.1s;
+}
+
+.footer-logo-link:hover {
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
+.footer-logo-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.footer-logo-link:focus:not(:focus-visible) {
+  outline: none
+}
+
+.footer-logo-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.footer-logo-link:active {
+  opacity: 0.3;
+  transition-duration: 0.1s;
 }
