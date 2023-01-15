@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32х32" href="images/favicon/favicon-32х32.png">
+    <link rel="icon" sizes="32x32" type="image/png" href="images/favicon/favicon-32х32.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -42,6 +42,51 @@
             </li>
             <li class="user-menu-item basket-item">
               <a class="user-menu-link basket-link" href="#"><span class="quantity-value">2</span>Корзина</a>
+
+              <!-- Поповер "Корзина" -->
+              <!-- Для появления поповера "Корзина" добавить класс popover-basket-open -->
+              <div class="popover-basket">
+                <section class="popover-basket-content">
+                  <h2 class="visually-hidden">Корзина.</h2>
+                  <ul class="popover-basket-list">
+                    <li class="popover-basket-item">
+                      <a class="popover-basket-link" href="#">
+                        <h3 class="popover-basket-title">Любительская<br> селфи-палка</h3>
+                        <img class="popover-basket-image" src="images/catalog/product-1.jpg" width="39" height="43"
+                          alt="Раздвижная селфи-палка черного цвета с креплением для мобильных устройств и кнопкой управления на рукоятке.">
+                      </a>
+                      <button class="popover-basket-button" type="button">
+                        <svg class="popover-basket-icon" aria-hidden="true" focusable="false" width="10" height="10"
+                          viewBox="0 0 26 26" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M26 2.36 23.64 0 13 10.64 2.36 0 0 2.36 10.64 13 0 23.64 2.36 26 13 15.36 23.64 26 26 23.64 15.36 13 26 2.36Z" />
+                        </svg>
+                        <span class="visually-hidden">Удалить товар из корзины.</span>
+                      </button>
+                    </li>
+                    <li class="popover-basket-item">
+                      <a class="popover-basket-link" href="#">
+                        <h3 class="popover-basket-title">Профессиональная селфи-палка</h3>
+                        <img class="popover-basket-image" src="images/catalog/product-2.jpg" width="39" height="43"
+                          alt="Раздвижная селфи-палка для профессионалов. Представлена в черном цвете с более мощной рукояткой, на которой имеется кнопка управления и крепление для всех видов камер.">
+                      </a>
+                      <button class="popover-basket-button" type="button">
+                        <svg class="popover-basket-icon" aria-hidden="true" focusable="false" width="10" height="10"
+                          viewBox="0 0 26 26" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M26 2.36 23.64 0 13 10.64 2.36 0 0 2.36 10.64 13 0 23.64 2.36 26 13 15.36 23.64 26 26 23.64 15.36 13 26 2.36Z" />
+                        </svg>
+                        <span class="visually-hidden">Удалить товар из корзины.</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="popover-basket-info-wrapper">
+                    <p class="popover-basket-result">Товаров: <span class="popover-basket-result-value">2</span></p>
+                    <p class="popover-basket-price">Сумма: <b>2000 ₽</b></p>
+                  </div>
+                  <a class="popover-basket-link-button" href="#">Открыть корзину</a>
+                </section>
+              </div>
             </li>
           </ul>
         </div>
@@ -373,8 +418,29 @@
 
           <!-- Логотип -->
           <div class="logo-image-footer-wrapper">
-            <img class="logo logo-footer" src="images/logo/logo-footer.svg" width="145" height="36"
-              alt="Логотип интернет-магазина современных гаджетов «Девайс».">
+            <svg class="footer-logo" aria-hidden="true" focusable="false" width="145" height="36" viewBox="0 0 145 36"
+              fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_37302_467)">
+                <path
+                  d="M27.2 0V35.3H19.6V32.9C17.9 34.8 15.5 36 12.1 36C5.5 36 0 30.2 0 22.7C0 15.2 5.5 9.4 12.1 9.4C15.5 9.4 18 10.6 19.6 12.5V0H27.2ZM19.6 22.7C19.6 18.9 17.1 16.5 13.6 16.5C10.1 16.5 7.6 18.9 7.6 22.7C7.6 26.5 10.1 28.9 13.6 28.9C17.1 28.8 19.6 26.5 19.6 22.7Z" />
+                <path
+                  d="M43.7001 29.2C45.8001 29.2 47.5001 28.4 48.5001 27.3L54.6001 30.8C52.1001 34.2 48.4001 36 43.6001 36C35.0001 36 29.6001 30.2 29.6001 22.7C29.6001 15.2 35.0001 9.4 43.0001 9.4C50.4001 9.4 55.8001 15.1 55.8001 22.7C55.8001 23.8 55.7001 24.8 55.5001 25.7H37.6001C38.6001 28.3 40.9001 29.2 43.7001 29.2ZM48.3001 20.1C47.5001 17.2 45.2001 16.1 42.9001 16.1C40.0001 16.1 38.1001 17.5 37.4001 20.1H48.3001Z" />
+                <path
+                  d="M82.0999 10.1L72.7999 35.3H64.1999L54.8999 10.1H63.2999L68.5999 26.1L73.8999 10.1C73.8999 10.1 82.0999 10.1 82.0999 10.1Z" />
+                <path d="M83.3999 10.1H90.9999V35.3H83.3999V10.1Z" />
+                <path
+                  d="M93.6001 22.7C93.6001 15.2 99.3001 9.4 107 9.4C111.9 9.4 116.2 12 118.4 15.9L111.8 19.7C110.9 17.9 109.1 16.9 106.9 16.9C103.6 16.9 101.2 19.3 101.2 22.7C101.2 26.2 103.6 28.5 106.9 28.5C109.1 28.5 111 27.4 111.8 25.7L118.4 29.5C116.3 33.4 112 36 107 36C99.3001 36 93.6001 30.2 93.6001 22.7Z" />
+                <path
+                  d="M132.8 29.2C134.9 29.2 136.6 28.4 137.6 27.3L143.7 30.8C141.2 34.2 137.5 36 132.7 36C124.1 36 118.7 30.2 118.7 22.7C118.7 15.2 124.2 9.4 132.1 9.4C139.5 9.4 144.9 15.1 144.9 22.7C144.9 23.8 144.8 24.8 144.6 25.7H126.7C127.7 28.3 130 29.2 132.8 29.2ZM137.5 20.1C136.7 17.2 134.4 16.1 132.1 16.1C129.2 16.1 127.3 17.5 126.6 20.1H137.5Z" />
+                <path d="M83.3999 0V10.1L90.9999 0H83.3999Z" />
+              </g>
+              <defs>
+                <clipPath id="clip0_37302_467">
+                  <rect width="145" height="36" />
+                </clipPath>
+              </defs>
+            </svg>
+            <span class="visually-hidden">Логотип интернет-магазина современных гаджетов «Девайс».</span>
           </div>
 
           <div class="footer-contacts-wrapper">
@@ -455,6 +521,78 @@
         </section>
       </div>
     </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <!-- Для появления модального окна, удалить класс modal-container-close -->
+    <div class="modal-container modal-container-close">
+      <div class="modal-delivery">
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="modal-field-input-group-wrapper">
+              <div class="modal-field-group">
+                <label class="modal-form-label" for="modal-form-field-your-name">Ваше имя:</label>
+                <input class="modal-form-field modal-form-field-your-name" type="text" id="modal-form-field-your-name"
+                  name="modal-form-your-name" placeholder="Введите имя" required>
+                <span class="modal-message">Добавьте имя</span>
+              </div>
+              <div class="modal-field-group">
+                <label class="modal-form-label" for="modal-form-field-email">Ваш e-mail:</label>
+                <input class="modal-form-field modal-form-field-email modal-field-input-error" type="email"
+                  id="modal-form-field-email" name="modal-form-email" placeholder="Введите e-mail" value="почта"
+                  required>
+                <span class="modal-message modal-message-error">Забавный у вас адрес</span>
+              </div>
+            </div>
+            <div class="modal-field-input-group-wrapper">
+              <div class="modal-field-group modal-field-group-product">
+                <label class="modal-form-label" for="modal-form-field-product">Что нужно привезти:</label>
+                <input class="modal-form-field" type="text" id="modal-form-field-product" name="modal-form-product"
+                  placeholder="В свободной форме" required>
+              </div>
+              <div class="modal-field-group modal-field-group-quantity">
+                <div class="modal-form-label-wrapper">
+                  <label class="modal-form-label" for="modal-form-field-quantity">Количество:</label>
+
+                  <!-- Тултип -->
+                  <div class="modal-form-tooltip">
+                    <button class="modal-form-tooltip-toggle" type="button"
+                      aria-labelledby="tooltip-label-quantity"></button>
+                    <p class="modal-form-tooltip-text" role="tooltip" id="tooltip-label-quantity">Постараемся найти,
+                      сколько нужно. Привезём сколько
+                      получится по
+                      требованиям к&nbsp;провозу багажа.</p>
+                  </div>
+                </div>
+                <!-- Если не указаны данные в поле ввода, добавить класс modal-field-input-error -->
+                <div class="modal-form-wrapper">
+                  <button class="modal-form-button" type="button">
+                    <svg class="modal-form-button-icon" aria-hidden="true" focusable="false" width="16" height="2"
+                      viewBox="0 0 16 2" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 0H0v2h16V0Z" />
+                    </svg>
+                    <span class="visually-hidden">Уменьшить.</span>
+                  </button>
+                  <input class="modal-form-field modal-form-field-quantity" id="modal-form-field-quantity" type="number"
+                    placeholder="0" value="1" name="modal-form-quantity" required>
+                  <button class="modal-form-button" type="button">
+                    <svg class="modal-form-button-icon" aria-hidden="true" focusable="false" width="16" height="16"
+                      viewBox="0 0 16 16" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z" />
+                    </svg>
+                    <span class="visually-hidden">Увеличить.</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="button modal-form-submit-button" type="submit">Отправить</button>
+          </form>
+        </section>
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+      </div>
+    </div>
   </body>
 
 </html>
