@@ -804,7 +804,7 @@ body {
 /* Галерея «Слайдер» */
 .gallery-slider {
   margin-bottom: 70px;
-  transform: translateY(-18px);
+  transform: translateY(-16px);
 }
 
 .gallery-slider .container {
@@ -926,12 +926,12 @@ body {
 
 .gallery-slider-text {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 }
 
 .gallery-slider-description {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 }
 
 .gallery-slider-text em {
@@ -1006,6 +1006,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  margin: 0;
   margin-bottom: 26px;
 }
 
